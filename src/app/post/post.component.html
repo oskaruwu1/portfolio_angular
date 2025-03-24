@@ -1,0 +1,8 @@
+<div class="grid" *ngIf="galleries">
+  <div class="tile" *ngFor="let item of galleries; trackBy: trackByItemId">
+    <h3>{{ item.title }}</h3>
+    <img [src]="item.thumbUrl" class="image" />
+    <p>{{ item.description }}</p>
+    <p><b>Kiedy:</b> {{ item.dateCreated | polishDate | uppercase }}</p>
+  </div>
+</div>

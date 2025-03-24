@@ -1,0 +1,11 @@
+.image{
+    width: 500px;
+    height: 300px;
+    border-radius: 6px;
+    outline: gray 1px solid;
+    outline-offset: 2px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}

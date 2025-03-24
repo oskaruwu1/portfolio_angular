@@ -1,5 +1,7 @@
+<input type="text" name="searchValue" [(ngModel)]="searchValue" placeholder="Szukaj">
+<p>Szukam : {{searchValue}}</p>
 <div class="grid" *ngIf="galleries">
-  <div class="tile" *ngFor="let item of galleries; trackBy: trackByItemId">
+  <div class="tile" *ngFor="let item of galleries | searchGalleries : searchValue; trackBy: trackByItemId">
     <h3>{{ item.title }}</h3>
     <img [src]="item.thumbUrl" class="image" />
     <p>{{ item.description }}</p>

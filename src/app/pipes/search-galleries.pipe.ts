@@ -7,12 +7,14 @@ import { IGallery } from '../post/interfaces/IGallery';
 })
 export class SearchGalleriesPipe implements PipeTransform {
   galleries: any;
+  year: number = 0;
 
-  transform(value: any, ...args: string[]): any {
+  transform(value: any, ...args: any[]): any {
     this.galleries = value;
     if (args) {
       this.galleries = this.galleries.filter((gallery: IGallery) => {
-        return (gallery.title.indexOf(args[0]) !== -1) || (gallery.description.indexOf(args[0]) !== -1);
+        this.year = args[1] ? new Date(gallery.dateCreated).getFullYear() : 0
+        return ((gallery.title.toLowerCase().indexOf(args[0].toLowerCase()) !== -1) || (gallery.description.toLowerCase().indexOf(args[0].toLowerCase()) !== -1)) && (this.year == parseInt(args[1]));
       })
       console.log(this.galleries)
     }else{

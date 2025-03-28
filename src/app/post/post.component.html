@@ -1,7 +1,11 @@
+<h3>Filtry</h3>
 <input type="text" name="searchValue" [(ngModel)]="searchValue" placeholder="Szukaj">
 <p>Szukam : {{searchValue}}</p>
+<ul *ngIf="galleries">
+  <li *ngFor="let item of galleries | getYears | removeDuplicates" (click)="setYear(item)">{{item}}</li>
+</ul>
 <div class="grid" *ngIf="galleries">
-  <div class="tile" *ngFor="let item of galleries | searchGalleries : searchValue; trackBy: trackByItemId">
+  <div class="tile" *ngFor="let item of galleries | searchGalleries : searchValue : searchYear; trackBy: trackByItemId">
     <h3>{{ item.title }}</h3>
     <img [src]="item.thumbUrl" class="image" />
     <p>{{ item.description }}</p>

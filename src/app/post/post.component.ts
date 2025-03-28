@@ -11,12 +11,18 @@ import { Galleries } from './constants/galleries.constant';
 export class PostComponent {
   galleries: IGallery[];
   searchValue: string;
+  searchYear: number;
   trackByItemId(index: number, item: any): number {
     return item.id;
+  }
+  setYear(year: number){
+    this.searchYear = year;
+    return null;
   }
 
   constructor() {
     this.galleries = Galleries;
     this.searchValue = "";
+    this.searchYear = 0;
   }
 }

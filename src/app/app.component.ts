@@ -9,6 +9,6 @@ import { Galleries } from './post/constants/galleries.constant';
 })
 export class AppComponent {
   title = 'Portfolio - Oskar Labuda';
-  description = "podruze";
+  description = "podruze, lubie podruze, lubie podruzowac z dawidem";
   galleries = Galleries;
 }

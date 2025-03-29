@@ -1,11 +1,36 @@
 .image{
-    width: 500px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     border-radius: 6px;
-    outline: gray 1px solid;
-    outline-offset: 2px;
+    outline: rgb(255, 255, 255) 1px solid;
+    outline-offset: 4px;
+}
+#filters{
+    background-color: rgba(82, 82, 82, 0.49);
+    width: fit-content;
+    padding: 5px 30px;
+    border-radius: 12px;
+    margin: 10px;
+    margin-top: 20px;
+    float: left;
+}
+li{
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+li:hover{
+    scale: 1.1;
 }
 .grid{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    margin-top: 10px;
+    grid-template-columns: repeat(2, auto);
+}
+.tile{
+    background-color: rgba(82, 82, 82, 0.49);
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 12px;
+    max-width: 610px;
 }

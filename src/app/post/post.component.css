@@ -24,7 +24,7 @@ li:hover{
 .grid{
     display: grid;
     margin-top: 10px;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
 }
 .tile{
     background-color: rgba(82, 82, 82, 0.49);

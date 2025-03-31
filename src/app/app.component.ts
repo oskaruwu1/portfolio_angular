@@ -11,4 +11,7 @@ export class AppComponent {
   title = 'Portfolio - Oskar Labuda';
   description = "podruze, lubie podruze, lubie podruzowac z dawidem";
   galleries = Galleries;
+  changeDesc(description: string){
+    this.description = description;
+  }
 }

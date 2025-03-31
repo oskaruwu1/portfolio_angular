@@ -2,7 +2,7 @@
 <section class="container">
   <div id="banner">
     <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
+    <p (mouseenter)="changeDesc('podruze, lubie podruze, lubie podruzowac BEZ dawida')" (mouseleave)="changeDesc('podruze, lubie podruze, lubie podruzowac z dawidem')">{{ description }}</p>
     <p>Ilość wpisów {{ galleries.length }}</p>
   </div>
   <app-post></app-post>
